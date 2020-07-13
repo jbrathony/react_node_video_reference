@@ -1,0 +1,13 @@
+.login-page {
+   
+    min-height: 100vh;
+    margin-top: -1px;
+    background-image: url(/img/header-logo1.png);
+    background-position: 50% 1%;
+    background-repeat: no-repeat;
+    background-size: 45% 80%;
+    border-top: 1px solid transparent;
+  .login-modal {
+    @include modal;
+  }
+}

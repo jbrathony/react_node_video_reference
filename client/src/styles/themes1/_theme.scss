@@ -1,0 +1,205 @@
+@mixin theme(
+  $primary,
+  $primary-transparent,
+  $primary-light,
+  $secondary,
+  $input-outline,
+  $icon,
+  $send-icon,
+  $error,
+  $my-message,
+  $message,
+  $sender,
+  $message-text,
+  $message-time,
+  $scroll-track,
+  $scroll-thumb
+) {
+
+  ::-webkit-scrollbar-track {
+      background: $scroll-track; 
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background: $scroll-thumb; 
+  }
+
+  .button-text {
+    color: $secondary;
+    border-color: $secondary;
+  }
+
+  .header-bar{
+    background: $primary;
+    .settings {
+      .themes {
+        margin: 0 10px;
+      }
+      button {
+        color: $secondary;
+        .icon {
+          color: $icon;
+        }
+      }
+    }
+    .header-right{
+      color: $message;
+      .icon {
+        color: $icon;
+      }
+    }
+  }
+
+  .chat-app {
+    .sidebar-left {
+      color: $primary-transparent;
+      background: transparent;
+
+      .broadcast{
+        .btn-camera{
+          background: $primary;
+          color: $icon;
+
+          .camera{
+            color: $icon;
+          }
+        }
+      }
+
+      .profile {
+        .close {
+          .icon {
+            color: $primary;
+          }
+        }
+      }
+
+      .public-chats {
+        .user-action-area {
+          .icon{
+            background-color: #999;
+          }
+          .icon.active {
+            background-color: $primary;
+          }
+        }
+  
+        .panel {
+          background: $secondary;
+          color: $primary;
+
+          .icon {
+            color: $primary;
+          }
+        }
+
+        .public-chats-list {
+          .list {
+            border-color: $primary-light;
+
+            .icon {
+              color: $primary;
+            }
+          }
+        }
+      }
+
+      .users {
+        .panel {
+          background: $primary;
+          color: $secondary;
+        }
+
+        .users-list {
+          .list {
+            border-color: $primary-light;
+          }
+        }
+      }
+    }
+
+    .chat-content {
+      .topbar {
+        color: $primary;
+        background: $secondary;
+
+        .more {
+          button {
+            .icon {
+              color: $primary;
+            }
+          }
+        }
+
+        .room-info{
+          .user-room.active{
+            background: $primary;
+            color: $secondary;
+          }
+          .missing-badge-ct.active{
+            color: $secondary;
+          }
+        }
+      }
+
+      .chat-input {
+        form {
+          border-color: $input-outline;
+
+          button {
+            .send-icon {
+              color: $send-icon;
+            }
+          }
+        }
+      }
+    }
+
+    .sidebar-right {
+      background: $primary-transparent;
+      color: $secondary;
+
+      .close {
+        button {
+          .icon {
+            color: $icon;
+          }
+        }
+      }
+
+      .themes {
+        .panel {
+          background: $primary;
+          color: $secondary;
+        }
+      }
+
+      .backgrounds {
+        .panel {
+          background: $primary;
+          color: $secondary;
+        }
+      }
+    }
+  }
+
+  .avatar-modal, .create-room-modal, .create-ban-modal, .password-modal, .login-modal, .join-room-modal, .broadcast-setting-modal, .setting-modal {
+    background: $primary;
+    color: $secondary;
+
+    .modal-content{
+      background-color: $primary;
+      border: 0px solid white;
+    }
+    form {
+      .error {
+        color: $error;
+      }
+
+      input {
+        color: $secondary;
+        border-color: $secondary;
+      }
+    }
+  }
+}

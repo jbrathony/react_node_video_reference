@@ -1,0 +1,169 @@
+.user-action-area {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  .panel-body {
+    display: flex;
+    flex-direction: column;
+
+    .user-body{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+      position: relative;
+
+      .user-avatar {
+        img{
+          width: 80px;
+          height: 80px;
+          vertical-align: middle;
+          border-radius: 50%;
+          object-fit: cover;
+        }  
+      }
+      .user-name{
+        line-height: 30px;
+      }
+      .md-close{
+        position: absolute;
+        right: 5px;
+      }
+    } /* user-body */
+
+    .user-actions {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      .user-action{
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        .icon-base{
+          display: flex;
+          .icon{
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            padding: 10px;
+            margin-bottom: 5px;
+            cursor: pointer;
+            color: #fff;
+          }
+        }
+        .label-base{
+          cursor: pointer;
+        }
+        
+      }
+    } /* user-actions */
+
+    .panel-links{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 40px 10px 20px 40px;
+
+      .action-link {
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 15px;
+        cursor: pointer;
+      }
+    }
+  }
+  .chat-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    background-image: url('/img/sun.png');
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    transition: all .5s ease;
+    margin: 3px;
+
+    @media (max-width: $medium) {
+      width: 100%;
+    }
+
+    .topbar {
+      display: flex;
+      height: 55px;
+      text-align: center;
+
+      .more {
+        display: none;
+
+        @media (max-width: $medium) {
+          display: inline;
+        }
+
+        button {
+          margin: 14px 0 0 10px;
+        }
+      }
+      
+      .room-info {
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        .user-room{
+          float: left;
+          display: flex;
+          align-items: center;
+          margin-left: 10px;
+          border: 1px solid #746db4;
+          padding: 2px;
+          position: relative;
+
+          p{
+            line-height: 100%;
+            flex: 1;
+            font: normal 14px "Muli", sans-serif;
+            margin: 0px 4px;
+          }
+          .missing-badge-ct{
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background-color: red;
+            padding: 0 2px;
+            height: 15px;
+            line-height: 17px;
+            font-size: 12px;
+            border-radius: 50%;
+            display: none;
+          }
+          .missing-badge-ct.active{
+            display: block !important;
+          }
+        }
+      }
+
+      .themes {
+
+        button {
+          margin: 13px 8px 0 0;
+        }
+      }
+    }
+
+    .messages {
+      height: calc(100vh - 206px);
+      padding: 20px;
+      overflow: auto;
+
+      @media (max-width: $medium) {
+        padding: 5px;
+      }
+    }
+
+  }
+}

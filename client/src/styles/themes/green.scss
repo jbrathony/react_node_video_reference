@@ -1,0 +1,19 @@
+@import './theme.scss';
+
+@include theme(
+  #1e5ab7,            // $primary
+  unquote('#040404'), // $primary-transparent
+  #1e5ab7,            // $primary-light
+  #fff,               // $secondary
+  #f5f5f5,            // $input-outline
+  #f5f5f5,            // $icon
+  #1e5ab7,            // $send-icon
+  #ff2579,            // $error
+  #c0e2e7,            // $my-message
+  #ffffff,            // $message
+  #f5f5f5,            // $sender
+  #000,               // $message-text
+  gray,               // $message-time
+  #b0bcc4,            // $scroll-track
+  #6c8594             // $scroll-thumb
+)

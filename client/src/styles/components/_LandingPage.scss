@@ -1,0 +1,14 @@
+.landing-page {
+  margin-bottom: 10px;
+  .room-cover{
+    height: 150px;
+    object-fit: fill;
+  }
+  .hidden{display: none;}
+  .room-descr {
+    height: 20px;
+    // white-space: nowrap; 
+    // overflow: hidden;
+    // text-overflow: ellipsis; 
+  }
+}

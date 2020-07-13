@@ -1,0 +1,449 @@
+*:focus {
+    outline: none;
+}
+
+body {
+  margin: 0;
+  font: $font-m;
+}
+
+.color1{ background-color: #212121 !important; }
+.color2{ background-color: #3d3c3a !important; }
+.color3{ background-color: #656565 !important; }
+.color4{ background-color: #6f4341 !important; }
+.color5{ background-color: #990703 !important; }
+.color6{ background-color: #ca226b !important; }
+.color7{ background-color: #f778a1 !important; }
+.color8{ background-color: #f32f2f !important; }
+.color9{ background-color: #c35817 !important; }
+.color10{ background-color: #ffad46 !important; }
+.color11{ background-color: #f1c85e !important; }
+.color12{ background-color: #006666 !important; }
+.color13{ background-color: #596247 !important; }
+.color14{ background-color: #3a6636 !important; }
+.color15{ background-color: #47b617 !important; }
+.color16{ background-color: #5cd87e !important; }
+.color17{ background-color: #6db4e9 !important; }
+.color18{ background-color: #2a61e3 !important; }
+
+.font-color1{ color: #212121 !important; }
+.font-color2{ color: #3d3c3a !important; }
+.font-color3{ color: #656565 !important; }
+.font-color4{ color: #6f4341 !important; }
+.font-color5{ color: #990703 !important; }
+.font-color6{ color: #ca226b !important; }
+.font-color7{ color: #f778a1 !important; }
+.font-color8{ color: #f32f2f !important; }
+.font-color9{ color: #c35817 !important; }
+.font-color10{ color: #ffad46 !important; }
+.font-color11{ color: #f1c85e !important; }
+.font-color12{ color: #006666 !important; }
+.font-color13{ color: #596247 !important; }
+.font-color14{ color: #3a6636 !important; }
+.font-color15{ color: #47b617 !important; }
+.font-color16{ color: #5cd87e !important; }
+.font-color17{ color: #6db4e9 !important; }
+.font-color18{ color: #2a61e3 !important; }
+
+/** general **/
+.full-width {  width: 100%; }
+button {
+  background: transparent;
+  border: none;
+  font-family: 'Muli', sans-serif;
+  cursor: pointer;
+  padding: 1px;
+}
+.hidden{ display: none !important;}
+.cur-pointer{
+  cursor: pointer;
+}
+
+.pd-tb-10{
+  padding: 10px 0;
+}
+.md-auto {
+  margin: 0 auto;
+}
+.mr-10{
+  margin-right: 10px !important;
+}
+.md-t-10{
+  margin-top: 10px;
+}
+.md-t-20{
+  margin-top: 20px;
+}
+.md-b-20{
+  margin-bottom: 20px;
+}
+.text-danger{
+  color: #d81616;
+}
+.text-right{
+  text-align: right;
+}
+.text-left{
+  text-align: left;
+}
+.pull-left{
+  float: left;
+}
+.d-flex{
+  display: flex;
+}
+.f-auto{
+  flex: auto;
+} 
+.f-direction-c{
+  flex-direction: column
+}
+.f-direction-r{
+  flex-direction: row
+}
+
+/** general end **/
+
+.ReactModalPortal .ReactModal__Overlay--after-open {
+  background: #eeeeeea2 !important;
+  z-index: 2000;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+.video-conference{
+  min-height: 100vh;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.p-relative{
+  position: relative;
+}
+
+.header-bar{
+  height: 50px;
+  display: flex;
+  .header-left{
+    min-width: 300px;
+    display: flex;
+    .logo{
+      flex: 1;
+      margin: 1px;
+    }
+    .settings{
+      // width: 50px;
+      display: flex;
+      .themes{
+        flex: 1;
+        display: flex;
+      }
+      .create-room{
+        flex: 1;
+        display: flex;
+      }
+    }
+  }
+  .header-right{
+    display: flex;
+    flex: 1;
+    flex-direction: row-reverse;
+    padding-right: 15px;
+    @media (max-width: 500px) {
+      display: none;
+    }
+
+    .setting-area{
+      display: flex;
+    }
+    .current-user{
+      display: flex;
+      align-items: center;
+      height: 100%;
+      .avatar-area{
+        position: relative;
+        flex: 1;
+        .user-avatar{
+          width: 32px;
+          float: right;
+          border-radius: 50%;
+        }
+        .user-type{
+          position: absolute;
+          width: 16px;
+          right: 0px;
+          bottom: 0px;
+          border-radius: 50%;
+        }
+      }
+      .name-area{
+        label{
+          margin: 0 15px;
+        }
+      }
+    }
+  }
+}
+
+.bg-success {
+  background-color: #28a745 !important;
+}
+
+@-webkit-keyframes progress-bar-stripes {
+  from {
+    background-position: 1rem 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+@keyframes progress-bar-stripes {
+  from {
+    background-position: 1rem 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+.progress-bar {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  transition: width 0.6s ease;
+}
+
+.progress-bar-striped {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-size: 1rem 1rem;
+}
+
+.progress-bar-animated {
+  -webkit-animation: progress-bar-stripes 1s linear infinite;
+  animation: progress-bar-stripes 1s linear infinite;
+  height: 20px;
+  border-radius: 3px;
+}
+
+.progress {
+  display: -ms-flexbox;
+  display: flex;
+  height: 1rem;
+  overflow: hidden;
+  font-size: 0.75rem;
+  background-color: #e9ecef;
+  border-radius: 0.25rem;
+  margin: 10px 30px;
+}
+*{
+  box-sizing: border-box;
+  // unicode-bidi: plaintext;
+}
+
+.__react_component_tooltip {
+  padding: 3px 10px;
+}
+
+.react-alert-area{
+  background-color: rgb(21, 21, 21);
+    color: white;
+    padding: 10px;
+    // text-transform: uppercase;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.03) 0px 2px 2px 2px;
+    font-family: Arial;
+    min-width: 300px;
+    max-width: 400px;
+    box-sizing: border-box;
+    margin: 10px;
+    
+    .icon-alert-close{
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      color: rgb(255, 255, 255);
+      background: transparent;
+    }
+    .confirm-area button{
+      margin-right: 20px;
+      color: rgb(54, 35, 231);
+    }
+}
+
+/***************************************** React Custom Slider *******************************************/
+.custom-slider-area{
+  width: 70px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  .mute-audio {
+    width : 27px;
+    margin-right: 3px;
+    cursor: pointer;
+    .icon {
+      color: white;
+    }
+  }
+  .custom-slider{
+    width : 60px;
+    .rc-slider-handle{
+      cursor: pointer;
+      border: solid 2px #10101000;
+    }
+  }
+}
+
+/***************************************** React Toggle *******************************************/
+.react-toggle {
+  touch-action: pan-x;
+
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.react-toggle-screenreader-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.react-toggle--disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.25s;
+  transition: opacity 0.25s;
+}
+
+.react-toggle-track {
+  width: 50px;
+  height: 24px;
+  padding: 0;
+  border-radius: 30px;
+  background-color: #4D4D4D;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
+  background-color: #000000;
+}
+
+.react-toggle--checked .react-toggle-track {
+  background-color: #19AB27;
+}
+
+.react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
+  background-color: #128D15;
+}
+
+.react-toggle-track-check {
+  position: absolute;
+  width: 14px;
+  height: 10px;
+  top: 0px;
+  bottom: 0px;
+  margin-top: auto;
+  margin-bottom: auto;
+  line-height: 0;
+  left: 8px;
+  opacity: 0;
+  -webkit-transition: opacity 0.25s ease;
+  -moz-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease;
+}
+
+.react-toggle--checked .react-toggle-track-check {
+  opacity: 1;
+  -webkit-transition: opacity 0.25s ease;
+  -moz-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease;
+}
+
+.react-toggle-track-x {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 0px;
+  bottom: 0px;
+  margin-top: auto;
+  margin-bottom: auto;
+  line-height: 0;
+  right: 10px;
+  opacity: 1;
+  -webkit-transition: opacity 0.25s ease;
+  -moz-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease;
+}
+
+.react-toggle--checked .react-toggle-track-x {
+  opacity: 0;
+}
+
+.react-toggle-thumb {
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #4D4D4D;
+  border-radius: 50%;
+  background-color: #FAFAFA;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.react-toggle--checked .react-toggle-thumb {
+  left: 27px;
+  border-color: #19AB27;
+}
+
+.react-toggle--focus .react-toggle-thumb {
+  -webkit-box-shadow: 0px 0px 3px 2px #0099E0;
+  -moz-box-shadow: 0px 0px 3px 2px #0099E0;
+  box-shadow: 0px 0px 2px 3px #0099E0;
+}
+
+.react-toggle:active:not(.react-toggle--disabled) .react-toggle-thumb {
+  -webkit-box-shadow: 0px 0px 5px 5px #0099E0;
+  -moz-box-shadow: 0px 0px 5px 5px #0099E0;
+  box-shadow: 0px 0px 5px 5px #0099E0;
+}

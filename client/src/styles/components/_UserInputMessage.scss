@@ -1,0 +1,142 @@
+.user-input-message {
+  display: flex;
+  height: 55px;
+  padding: 0 2px;
+  background: #fff;
+  box-shadow: 0 -1px 10px $shadow-light;
+  
+  .emoji-mart-bar{
+    display: none;
+  }
+  .emoji-btn {
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+  }
+
+  .emoji-area{
+    position: absolute;
+    width: 300px;
+    height: 382px;
+    right: -40px;
+    bottom: 0px;
+  }
+
+  .file-upload-area{
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    label{
+      cursor: pointer;
+      margin: 0;
+    }
+
+  }
+  input[type="file"] {
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+    // alternative to pointer-events, compatible with all browsers, just make it impossible to find
+    width: 1px;
+    height: 1px;
+  }
+  
+  .bold-area{
+    font-style: italic;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+
+    .text-bold.active{
+      font-weight: bold;
+    }
+  }
+  .color-area{
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+
+    .user-color{
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+    }
+
+    .color-panel{
+      position: absolute;
+      width: 205px;
+      height: 118px;
+      bottom: 70px;
+      padding: 5px 10px;
+      left: 0px;
+      background-color: white;
+      box-shadow: 0 2px 10px -2px grey;
+
+      .color-snap{
+        width: 20px;
+        height: 20px;
+        margin: 4px 3px;
+        border-radius: 50%;
+        float: left;
+      }
+      .color-snap.active::after{
+        top: -3px;
+        content: "\2713";
+        left: 4px;
+        position: relative;
+        color: #fff;
+      }
+    }
+    .color-panel::before{
+      content: " ";
+      position: absolute;
+      display: block;
+      bottom: -7px;
+      border: 8px solid #fff;
+      border-color: transparent transparent #fff #fff;
+      -webkit-transform: translateX(-50%) rotate(315deg);
+      transform: translateX(-50%) rotate(315deg);
+      box-shadow: -2px 2px 3px rgba(57, 73, 76, 0.1);
+      left: 25px;
+    }
+  }
+
+  form {
+    display: flex;
+    flex: auto;
+    justify-content: space-between;
+    margin: 5px;
+    background: #fff;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    
+    input {
+      width: 90%;
+      padding: 7px 15px;
+      font-size: 16px;
+      font-family: 'Muli', sans-serif;
+      border: none;
+      border-radius: 10px;
+    }
+  }
+
+  form.message-bold{
+    font-weight: bold;
+    // .emojionearea.emojionearea-inline>.emojionearea-editor{
+      
+    // }
+  }
+}

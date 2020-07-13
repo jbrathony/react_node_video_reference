@@ -1,0 +1,167 @@
+.sidebar-left {
+  min-width: 248px;
+  max-width: 248px;
+  -webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+  transition: all .5s ease;
+  margin: 3px 0px;
+  display: flex;
+  flex-direction: column;
+  
+  .close {
+    position: absolute;
+    right: -30px;
+    top: 0px;
+    background-color: white;
+    padding: 5px;
+    display: none;
+
+    @media (max-width: $medium) {
+      display: inline;
+    }
+
+    button {
+      margin: 10px 5px;
+    }
+  }
+  .broadcast{
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    margin-bottom: 3px;
+
+    .btn-camera{
+      width: 100%;
+      position: relative;
+      font-weight: bold;
+      font-size: 16px;
+      margin: 0 3px;
+
+      .camera{
+        position: absolute;
+        width: 24px;
+        left: 10px;
+        top: 7px;
+      }
+    }
+  }
+
+  .profile {
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+    display: none;
+
+    .left {
+      display: flex;
+
+      img {
+        min-width: 70px;
+        max-width: 70px;
+        min-height: 70px;
+        max-height: 70px;
+        margin: 10px;
+        border-radius: 50%;
+      }
+
+      p {
+        margin: 15px;
+        font: $font-l-bold;
+      }
+
+      .edit {
+        margin-left: 15px;
+      }
+    }
+
+  }
+
+  .public-chats {
+    margin: 0 3px;
+    border: 1px solid #ccc;
+    background: white;
+    flex: 1;
+
+    .panel {
+      @include panel;
+    }
+
+    .chat-user-list{
+      display: flex;
+      flex-direction: column;
+      .search-user{
+        flex: 1;
+        border-top: 1px solid #eee;
+        padding: 3px 10px;
+        input{
+          width: 100%;
+          border: none;
+        }
+      }
+    }
+
+    .public-chats-list {
+      overflow-y: auto;
+      height: calc( 100vh - 179px );
+      .list {
+        display: flex;
+        height: auto;
+        margin: 0 10px 2px;
+        position: relative;
+        
+        .img-user-type, .img-user-gender{
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          vertical-align: top;
+        }
+        .primary {
+          margin: 3px 10px 0 10px;
+          font: $font-m;
+          cursor: pointer;
+        }
+
+        .img-user-star-owner{
+          position: absolute;
+          left: 0px;
+          color: #006eff;
+        }
+        .img-user-star-moderator{
+          position: absolute;
+          left: 0px;
+          color: #363636;
+        }
+        .img-user-star-admin{
+          position: absolute;
+          left: 0px;
+          color: #ff0000;
+        }
+
+        .img-user-block{
+          position: absolute;
+          color: #d81616;
+        }
+
+        .img-user-camera{
+          color: #e6e6e6;
+        }
+
+        .img-user-camera.active{
+          color: #1466aff1;
+        }
+    
+      }
+    }
+  }
+
+  .users {
+    display: none;
+    .panel {
+      @include panel;
+    }
+
+    .users-list {
+      @include list;
+    }
+  }
+}

@@ -1,0 +1,298 @@
+.video-conference-area-auto {
+  height: calc(100vh - 56px);
+  width: 418px;
+  // min-width: 400px;
+  -webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+  transition: all .5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  margin: 3px;
+
+  .loading-overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    background-color: rgb(0, 0, 0);
+  }
+
+
+  .width100 {
+    width: 380px;
+    height: 260px;
+    video{
+      width: 380px;
+      height: 260px;
+    }
+    .loading-overlay{
+      padding-top: 120px !important;
+    }
+  }
+  .width50{
+    width: 196px;
+    height: 147px;
+    video{
+      width: 196px;
+      height: 147px;
+    }
+    .loading-overlay{
+      padding-top: 45px !important;
+    }
+  }
+
+  .width33{
+    width: 128px;
+    height: 96px;
+    video{
+      width: 128px;
+      height: 96px;
+    }
+    .loading-overlay{
+      padding-top: 20px !important;
+    }
+    .overlayBtm{
+      bottom: 0px !important;
+      .icon-base .icon{
+        width: 30px !important;
+        height: 30px !important;
+      }
+      .icon-base .icon-video-zoom {
+        width: 30px !important;
+        height: 24px !important;
+        padding: 8px 4px 0px;
+      }
+    }
+  }
+  
+  #remote_area{
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    .remote-room-area{
+      flex: 1;
+      display: flex;
+      // flex-wrap: wrap;
+      // align-items: flex-end;
+      // align-content: flex-start;
+    }
+
+    .local-area{
+      position: relative;
+      // border: 2px solid white;
+      float: right;
+      margin: 2px;
+      display: table;
+
+      .ecp-overlay{
+        display: none;
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+      }
+      .overlay{
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        height: 50px;
+        .overlayTop{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          padding: 10px 15px;
+          .left-icon{
+            flex: 1;
+            .base-area{
+              padding: 3px 8px;
+              background-color: rgba(71, 71, 71, 0.329);
+              display: table;
+              border-radius: 3px;
+            }
+          }
+        }
+      }
+    }
+    
+    .local-area:hover{
+      .ecp-overlay{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background-color: #3333337d;
+        -webkit-transition: all .5s ease;
+        -moz-transition: all .5s ease;
+        transition: all .5s ease;
+  
+        .overlayTop {
+          display: flex;
+          height: 50px;
+          justify-content: flex-start;
+          align-items: center;
+          .icon-private-video{
+            margin: 0 10px;
+          }
+        }
+        
+        .overlayBtm{
+          position: absolute;
+          width: 80%;
+          bottom: 10px;
+          height: 60px;
+          left: 10%;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+  
+          .icon-base{
+            flex: 1;
+            display: flex;
+            justify-content: center;
+  
+            .icon{
+              border-radius: 50%;
+              width: 35px;
+              height: 35px;
+              padding: 7px;
+              cursor: pointer;
+              border: 1px solid white;
+            }
+  
+            .icon.disabled{
+              background-color: rgba(248, 140, 140, 0) !important;  
+            }
+  
+            .icon-pauseVideo, .icon-local-video-zoom{
+              color: #fff;
+              background-color: rgb(255, 41, 41);
+            }
+            .icon-video-close{
+              color: #fff;
+              background-color: rgb(81, 202, 0);
+            }
+          }
+          
+        }
+      }
+    }
+
+    .remote-room {
+      float: right;
+      display: table;
+      position: relative;
+      margin: 2px;
+      background: white;
+      
+      .ecp-overlay{
+        display: none;
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+      }
+    }
+
+    .remote-room:hover{
+      .ecp-overlay{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        display: flex;
+        flex-direction: column;
+        background-color: #3333337d;
+        -webkit-transition: all .5s ease;
+        -moz-transition: all .5s ease;
+        transition: all .5s ease;
+        
+        .overlayCenter{
+          position: absolute;
+          width: 90%;
+          bottom: calc(50% - 17px);
+          left: 5%;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+  
+          .icon-base{
+            flex: 1;
+            display: flex;
+            justify-content: center;
+  
+            .icon{
+              border-radius: 50%;
+              width: 35px;
+              height: 35px;
+              padding: 7px;
+              cursor: pointer;
+            }
+  
+            .icon-video-close{
+              color: #fff;
+              background-color: rgb(0, 0, 0);
+            }
+          }
+          
+        }
+        .overlayBtm{
+          position: absolute;
+          width: 90%;
+          bottom: 10px;
+          height: 40px;
+          left: 5%;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+  
+          .icon-base{
+            flex: 1;
+            display: flex;
+            justify-content: center;
+  
+            .icon{
+              border-radius: 50%;
+              width: 35px;
+              height: 35px;
+              padding: 7px;
+              cursor: pointer;
+              color: white;
+            }
+  
+            .icon-video-zoom{
+              width: 35px;
+              height: 27px;
+              padding: 8px 4px 0px;
+            }
+            .icon-zoom{
+              flex: 1;
+              text-align: right;
+            }
+          }
+          
+        }
+      }
+    }
+
+    .owner-overlay{
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      width: 100%;
+      font: $font-s;
+      color: white;
+      text-align: right;
+    }
+
+    .watermark-overlay{
+      position: absolute;
+      right: 5px;
+      bottom: 10px;
+      width: 100%;
+      font: $font-xs-italic;
+      color: rgba(255, 255, 255, 0.34);
+      text-align: right;
+    }
+  }
+}

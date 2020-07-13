@@ -1,0 +1,18 @@
+.landing-page {
+  margin-bottom: 40px;
+  .room-cover{
+    height: 150px;
+    object-fit: cover;
+  }
+  .room-title{
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+  }
+  .room-descr {
+    height: 50px;
+    // white-space: nowrap; 
+    // overflow: hidden;
+    // text-overflow: ellipsis; 
+  }
+}

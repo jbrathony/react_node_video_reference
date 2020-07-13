@@ -1,0 +1,90 @@
+.setting-modal {
+  width: 400px;
+  height: auto;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  outline: none;
+  
+  @media (max-width: 400px) {
+    width: 300px;
+  }
+
+  .setting-parent{
+    
+    .s-p-header{
+      text-align: right;
+      align-items: center;
+      padding: 10px;
+      border-bottom: 1px solid #aaa;
+
+      span{
+        font-size: 20px;
+      }
+      .md-close {
+        cursor: pointer;
+      }
+    }
+
+    .s-p-row {
+      margin: 5px 0px;
+      align-items: center;
+      padding: 10px;
+      text-align: right;
+
+      .icon-area {
+        width: 50px;
+      }
+    }
+    .s-p-row:hover{
+      background-color: #aaa;
+      cursor: pointer;
+    }
+    .s-p-row.disable:hover{
+      background-color: transparent;
+      cursor: pointer;
+    }
+  }
+
+  .s-header{
+    text-align: right;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #aaa;
+
+    span{
+      font-size: 20px;
+    }
+    .md-back {
+      cursor: pointer;
+    }
+  }
+  .s-body{
+    text-align: right;
+    padding: 10px;
+    .s-body-r{
+      margin: 5px 0px;
+      align-items: center;
+
+      .sounds-area{
+        margin: 0 20px;
+      }
+    }
+  }
+
+  input[type=checkbox]
+  {
+    /* Double-sized Checkboxes */
+    -ms-transform: scale(1.5); /* IE */
+    -moz-transform: scale(1.5); /* FF */
+    -webkit-transform: scale(1.5); /* Safari and Chrome */
+    -o-transform: scale(1.5); /* Opera */
+    cursor: pointer;
+  }
+  
+  .setting-message{
+
+  }
+
+}

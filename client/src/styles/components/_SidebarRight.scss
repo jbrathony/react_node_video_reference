@@ -1,0 +1,38 @@
+.sidebar-right {
+  min-width: 300px;
+  max-width: 300px;
+  min-height: 30vh;
+  -webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+  transition: all .5s ease;
+
+  .close {
+    position: absolute;
+    left: 0px;
+    top: -7px;
+    button {
+      margin: 10px 5px;
+    }
+    
+  }
+
+  .themes {
+    .panel {
+      @include panel;
+    }
+
+    .colors {
+      @include tiles;
+    }
+  }
+
+  .backgrounds {
+    .panel {
+      @include panel;
+    }
+
+    .images {
+      @include tiles;
+    }
+  }
+}
